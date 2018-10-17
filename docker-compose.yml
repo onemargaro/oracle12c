@@ -1,9 +1,12 @@
-version: '2'
+version: '3'
 services:
   oracle:
     build: ./oracle
+    restart: unless-stopped
     ports:
       - 8080:8080
       - 1521:1521
     volumes:
-      - ./data:/u01/app/oracle
+      - oracle-data:/u01/app/oracle
+volumes:
+  oracle-data:  
