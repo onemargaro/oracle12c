@@ -1,7 +1,6 @@
 ## Oracle 12C Docker
 
-* Important! create folder data before run container
-* The data folder contains the data stored in the databases created with oracle
+* The persistent data are located in the volume created with docker-compose file.
 * Run instance of docker 12c
   ```bash
    docker-compose up -d
